@@ -1,0 +1,48 @@
+﻿<Window x:Class="Prac03.AdminMode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prac03"
+        mc:Ignorable="d"
+        Title="Режим адміністратора" Height="473.1" Width="800" WindowStartupLocation="CenterScreen" Closed="AdminMode_Closed" ResizeMode="NoResize">
+
+    <Grid x:Name="adminGrid">
+        <Label Content="Введіть пароль адміністратора" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="29,28,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button x:Name="SignIn" Content="Авторизуватися" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="25" Margin="25,105,0,0" VerticalAlignment="Top" Width="253" FontSize="14" Click="SignIn_Click"/>
+        <Label Content="Перегляд користувачів за списком" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" FontSize="14" IsEnabled="False" Width="253"/>
+        <DataGrid x:Name="MyGrid1" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="199" Margin="25,189,0,0" VerticalAlignment="Top" Width="253" IsEnabled="False"/>
+        <Label Content="Зміна паролю адміністратора" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="432,28,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" IsEnabled="False" Width="238"/>
+        <Label Content="Введіть поточний пароль" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="302,62,0,0" VerticalAlignment="Top" FontSize="14" IsEnabled="False"/>
+        <Label Content="Введіть новий пароль" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="551,62,0,0" VerticalAlignment="Top" FontSize="14" IsEnabled="False"/>
+        <Label Content="Повторіть пароль" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="303,135,0,0" VerticalAlignment="Top" FontSize="14" IsEnabled="False"/>
+        <Button x:Name="Update" Content="Оновити" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="25" Margin="669,137,0,0" VerticalAlignment="Top" Width="108" FontSize="14" IsEnabled="False" Click="UpdatePass_Click"/>
+        <Label Content="Перегляд кожного користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="303,178,0,0" VerticalAlignment="Top" FontSize="14" IsEnabled="False"/>
+        <Label Content="Ім'я користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="302,207,0,0" VerticalAlignment="Top" FontSize="14" IsEnabled="False"/>
+        <Label Content="Прізвище користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="303,239,0,0" VerticalAlignment="Top" FontSize="14" IsEnabled="False"/>
+        <Label Content="Логін" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="557,207,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.549,0.451" IsEnabled="False"/>
+        <Label Content="Статус" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="557,241,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.549,0.451" IsEnabled="False"/>
+        <Label x:Name="Name" FontFamily="Times New Roman" Content="" HorizontalAlignment="Left" Margin="450,207,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.549,0.451" Width="88"/>
+        <Label x:Name="Surname" FontFamily="Times New Roman" Content="" HorizontalAlignment="Left" Margin="450,241,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.549,0.451" Width="88"/>
+        <Label x:Name="Login" FontFamily="Times New Roman" Content="" HorizontalAlignment="Left" Margin="607,207,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.508,0.451" Width="107"/>
+        <Label x:Name="Status" FontFamily="Times New Roman" Content="" HorizontalAlignment="Left" Margin="609,241,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.383,0.451" Width="105"/>
+        <Label Content="Обмеження на пароль" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="429,270,0,0" VerticalAlignment="Top" FontSize="14" IsEnabled="False"/>
+        <Label x:Name="Restriction" FontFamily="Times New Roman" Content="" HorizontalAlignment="Left" Margin="575,270,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.539,0.59" Width="44"/>
+        <Button x:Name="Previous" Content="Попередній" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="24" Margin="302,273,0,0" VerticalAlignment="Top" Width="105" IsEnabled="False" Click="Previous_Click"/>
+        <Button x:Name="Next" Content="Наступний" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="24" Margin="637,273,0,0" VerticalAlignment="Top" Width="105" IsEnabled="False" Click="Next_Click"/>
+        <Button x:Name="LogOut" Content="Вийти з системи" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="24" Margin="302,381,0,0" VerticalAlignment="Top" Width="135" Click="LogOut_Click"/>
+        <Button x:Name="Adduser" FontFamily="Times New Roman" Content="Додати користувача" HorizontalAlignment="Left" Height="24" Margin="302,350,0,0" VerticalAlignment="Top" Width="135" IsEnabled="False" Click="AddUser_Click"/>
+        <TextBox x:Name="NewUser" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="28" Margin="302,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontSize="15" IsEnabled="False"/>
+        <Label Content="Користувач" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="499,316,0,0" VerticalAlignment="Top" FontSize="14" IsEnabled="False"/>
+        <ComboBox x:Name="UserCB" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="28" Margin="627,317,0,0" VerticalAlignment="Top" Width="109" IsEnabled="False" SelectionChanged="ChangedUser"/>
+        <CheckBox x:Name="Activity" FontFamily="Times New Roman" Content="Активність" HorizontalAlignment="Left" Margin="499,350,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <CheckBox x:Name="Restrict" FontFamily="Times New Roman" Content="Обмеженя на пароль" HorizontalAlignment="Left" Margin="499,373,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="SetChanges" Content="Встановити зміни" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="23" Margin="651,364,0,0" VerticalAlignment="Top" Width="126" IsEnabled="False" Click="SetChanges_Click"/>
+        <Button x:Name="CloseWindow" Content="Закрити вікно" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="23" Margin="537,410,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.723,1.77" Click="ExitButton_Click"/>
+        <PasswordBox x:Name="AdminPass" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="34" Margin="29,57,0,0" VerticalAlignment="Top" Width="249" FontSize="18"/>
+        <PasswordBox x:Name="OldPass" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="27" Margin="303,91,0,0" VerticalAlignment="Top" Width="173" FontSize="14" IsEnabled="False"/>
+        <PasswordBox x:Name="NewPass1" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="27" Margin="557,91,0,0" VerticalAlignment="Top" Width="173" FontSize="14" IsEnabled="False"/>
+        <PasswordBox x:Name="NewPass2" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="27" Margin="483,137,0,0" VerticalAlignment="Top" Width="173" FontSize="14" IsEnabled="False"/>
+
+    </Grid>
+</Window>

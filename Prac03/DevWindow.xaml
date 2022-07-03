@@ -1,0 +1,19 @@
+﻿<Window x:Class="Prac03.DevWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prac03"
+        mc:Ignorable="d"
+        Title="Інформація про розробника" Height="292.4" Width="541.363" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Grid Margin="0,0,-5.8,-0.8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Розробник програмного засобу розмежування повноважень користувачів" HorizontalAlignment="Center" VerticalAlignment="Top" Height="27" Width="527" FontFamily="Times New Roman" FontSize="16" FontWeight="Bold" VerticalContentAlignment="Center" Margin="4,10,9.8,0" FontStyle="Italic"/>
+
+        <Label Content="Факультет прикладної математики&#x0a;Студент гр. КП-12&#xD;&#xA;спеціальність 121 – Інженерія ПЗ. &#xD;&#xA;Гавриш Олексій Вікторович" HorizontalAlignment="Left" VerticalAlignment="Top" Height="146" Width="308" FontFamily="Times New Roman" FontSize="20" VerticalContentAlignment="Center" Margin="113,42,0,0"/>
+
+    </Grid>
+</Window>

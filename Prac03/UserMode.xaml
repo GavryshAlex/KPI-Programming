@@ -1,0 +1,41 @@
+﻿<Window x:Class="Prac03.UserMode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prac03"
+        mc:Ignorable="d"
+        Title="Режим користувача" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
+    <Grid x:Name="userGrid">
+        <Label Content="АВТОРИЗАЦІЯ КОРИСТУВАЧА" HorizontalAlignment="Left" Margin="33,21,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="15" FontWeight="Bold"/>
+        <Label Content="Логін користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="21,53,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Label Content="Пароль користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="19,87,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <TextBox x:Name="Login_l" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="165,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Login_l_TextChanged"/>
+        <PasswordBox x:Name="Pass_l" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="165,92,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Авторизуватися" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="39" Margin="21,134,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold" Click="SignIn_Click"/>
+        <Button x:Name="SignOut" Content="Вийти з системи" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="39" Margin="183,134,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold" Click="SignOut_Click"/>
+        <Label Content="ЗМІНА ДАНИХ КОРИСТУВАЧА" HorizontalAlignment="Left" Margin="47,191,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="15" FontWeight="Bold"/>
+        <Label Content="Ім'я користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="35,231,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Label Content="Прізвище користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="33,265,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Label Content="Новий пароль" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="33,297,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Label Content="Повторити новий пароль" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="33,329,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Button x:Name="Update" FontFamily="Times New Roman" Content="Оновити дані" HorizontalAlignment="Left" Height="39" Margin="119,360,0,0" VerticalAlignment="Top" Width="128" FontWeight="Bold" IsEnabled="False" Click="Update_Click"/>
+        <PasswordBox x:Name="NewPass1" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="213,297,0,0" VerticalAlignment="Top" Width="120" IsEnabled="True"/>
+        <PasswordBox x:Name="NewPass2" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="213,329,0,0" VerticalAlignment="Top" Width="120" IsEnabled="True"/>
+        <TextBox x:Name="Name_l" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="213,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="True"/>
+        <Button x:Name="Back_to_menu" FontFamily="Times New Roman" Content="Закрити режим користувача" HorizontalAlignment="Left" Height="39" Margin="569,361,0,0" VerticalAlignment="Top" Width="187" FontWeight="Bold" Click="ExitButton_Click"/>
+        <Label Content="РЕЄСТРАЦІЯ НОВОГО КОРИСТУВАЧА" HorizontalAlignment="Left" Margin="467,21,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="15" FontWeight="Bold"/>
+        <TextBox x:Name="Surname_l" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="213,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="True"/>
+        <Label Content="Ім'я користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="469,48,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Label Content="Прізвище користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="467,78,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Label Content="Пароль користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="467,136,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Label Content="Повторити пароль" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="467,166,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Label Content="Логін користувача" FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="467,108,0,0" VerticalAlignment="Top" FontSize="13" FontWeight="Bold"/>
+        <Button x:Name="Registry" FontFamily="Times New Roman" Content="Зареєструватися" HorizontalAlignment="Left" Height="39" Margin="516,209,0,0" VerticalAlignment="Top" Width="187" FontWeight="Bold" Click="Registr_Click"/>
+        <TextBox x:Name="Name_r" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="636,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="True"/>
+        <TextBox x:Name="Surname_r" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="636,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="True"/>
+        <TextBox x:Name="Login_r" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="636,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="True"/>
+        <PasswordBox x:Name="Pass_r" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="636,141,0,0" VerticalAlignment="Top" Width="120" IsEnabled="True"/>
+        <PasswordBox x:Name="Pass1_r" FontFamily="Times New Roman" HorizontalAlignment="Left" Height="22" Margin="636,169,0,0" VerticalAlignment="Top" Width="120" IsEnabled="True"/>
+    </Grid>
+</Window>
